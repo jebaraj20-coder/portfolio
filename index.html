@@ -5,40 +5,107 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jebaraj Baskaran | Portfolio</title>
 
+  <meta name="description" content="Lead Java Developer with 12+ years of experience in Java, Spring Boot, Angular, Docker and Cloud technologies." />
+
   <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f4f6f8;
       color: #1f2937;
+      line-height: 1.6;
     }
 
+    /* ================= HEADER / HERO ================= */
     header {
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: #fff;
-      padding: 40px 20px;
+      padding: 70px 20px;
       text-align: center;
+      border-bottom: 5px solid #2563eb;
     }
 
+    header h1 {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: #cbd5f5;
+    }
+
+    .hero-buttons {
+      margin-top: 30px;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 12px 26px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #1e40af;
+    }
+
+    .btn-outline {
+      border: 2px solid #2563eb;
+      color: #2563eb;
+    }
+
+    .btn-outline:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    /* ================= SECTIONS ================= */
     section {
       max-width: 1100px;
-      margin: 40px auto;
+      margin: 60px auto;
       background: #fff;
-      padding: 40px;
-      border-radius: 14px;
-      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 35px rgba(15, 23, 42, 0.08);
+    }
+
+    section:nth-of-type(even) {
+      background: #fafbfc;
     }
 
     h2 {
+      font-size: 1.9rem;
       color: #0f172a;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      position: relative;
     }
 
-    /* WHAT I DO */
+    h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #2563eb;
+      display: block;
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+
+    /* ================= WHAT I DO ================= */
     .what-i-do {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
@@ -47,20 +114,21 @@
     }
 
     .what-i-do p {
-      line-height: 1.8;
       color: #374151;
+      margin-bottom: 15px;
     }
 
-    /* TAG CLOUD */
+    /* ================= TAG CLOUD ================= */
     .tagcloud {
       width: 420px;
       height: 420px;
+      margin: auto;
     }
 
     .tagcloud--item {
       font-weight: 600;
       color: #334155;
-      padding: 4px 10px;
+      padding: 6px 12px;
       border-radius: 20px;
       transition: 0.3s;
     }
@@ -70,15 +138,14 @@
       color: #fff;
     }
 
-    /* EXPERIENCE LAYOUT */
+    /* ================= EXPERIENCE ================= */
     .experience-grid {
       display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 40px;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 50px;
       margin-top: 30px;
     }
 
-    /* LEFT TIMELINE */
     .timeline {
       border-left: 3px solid #e5e7eb;
       padding-left: 25px;
@@ -93,7 +160,7 @@
       content: '';
       position: absolute;
       left: -34px;
-      top: 5px;
+      top: 6px;
       width: 14px;
       height: 14px;
       background: #2563eb;
@@ -116,11 +183,11 @@
       color: #64748b;
     }
 
-    /* RIGHT DETAIL CARD */
+    /* ================= CURRENT ROLE CARD ================= */
     .current-role {
       background: #f8fafc;
-      padding: 30px;
-      border-radius: 14px;
+      padding: 35px;
+      border-radius: 16px;
       border-left: 6px solid #2563eb;
     }
 
@@ -130,32 +197,53 @@
     }
 
     .current-role p {
-      line-height: 1.7;
       color: #374151;
     }
 
     .badges {
-      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
     }
 
     .badge {
-      display: inline-block;
       background: #e0e7ff;
       color: #1e3a8a;
-      padding: 6px 12px;
+      padding: 7px 14px;
       border-radius: 999px;
       font-size: 0.85rem;
-      margin: 6px 6px 0 0;
       font-weight: 500;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    ul li {
+      margin-bottom: 8px;
+      color: #374151;
+    }
+
+    /* ================= CONTACT ================= */
+    #contact p a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact p a:hover {
+      text-decoration: underline;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       color: #6b7280;
     }
 
-    /* RESPONSIVE */
+    /* ================= RESPONSIVE ================= */
     @media (max-width: 768px) {
       .what-i-do,
       .experience-grid {
@@ -165,7 +253,6 @@
       .tagcloud {
         width: 320px;
         height: 320px;
-        margin: auto;
       }
     }
   </style>
@@ -176,26 +263,20 @@
 <header>
   <h1>Jebaraj Baskaran</h1>
   <p>Lead Java Developer | Spring Boot | Angular</p>
+
+  <div class="hero-buttons">
+    <a href="#contact" class="btn-primary">Contact Me</a>
+    <a href="https://jebaraj20-coder.github.io/portfolio/" target="_blank" class="btn-outline">View Portfolio</a>
+  </div>
 </header>
 
 <section>
-  <!-- WHAT I DO -->
   <div class="what-i-do">
     <div>
-      <h2>What I Do?</h2>
-      <p>
-        Hello! I'm <strong>Jebaraj Baskaran</strong>, a Lead Software Developer with
-        <strong>12 years of experience</strong> in the IT industry.
-      </p>
-      <p>
-        Highly skilled in <strong>Java, Spring Boot, Angular, CSS, and JavaScript</strong>.
-        Experienced in <strong>Docker, Kubernetes</strong> and
-        <strong>Apache Tomcat</strong>.
-      </p>
-      <p>
-        Proven track record of leading cross-functional teams and delivering
-        innovative solutions to complex technical challenges.
-      </p>
+      <h2>What I Do</h2>
+      <p><strong>Hello! I'm Jebaraj Baskaran</strong>, a Lead Software Developer with <strong>12+ years</strong> of industry experience.</p>
+      <p>Expert in <strong>Java, Spring Boot, Angular, JavaScript, and CSS</strong>, with hands-on experience in <strong>Docker, Kubernetes</strong> and <strong>Apache Tomcat</strong>.</p>
+      <p>Proven track record of leading teams, modernizing legacy systems, and delivering scalable enterprise applications.</p>
     </div>
 
     <div>
@@ -203,12 +284,9 @@
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
-  <h2 style="margin-top:60px;">Experience</h2>
+  <h2 style="margin-top:70px;">Experience</h2>
 
   <div class="experience-grid">
-
-    <!-- LEFT: TIMELINE -->
     <div class="timeline">
       <div class="timeline-item">
         <div class="company">Renault Nissan ▪ Chennai</div>
@@ -247,13 +325,11 @@
       </div>
     </div>
 
-    <!-- RIGHT: CURRENT ROLE DETAIL -->
     <div class="current-role">
       <h3>Renault Nissan – Lead Software Developer</h3>
       <p>
-        Handling an internal <strong>Vehicle Management System</strong> with 150+ unique pages,
-        used to manage manufacturing and assembling based on <strong>BOM structures</strong>.
-        Currently leading the migration of this application to the latest technology stack.
+        Leading the modernization of a <strong>Vehicle Management System</strong> with 150+ pages,
+        handling manufacturing and BOM-driven processes.
       </p>
 
       <h4>Legacy Stack</h4>
@@ -267,9 +343,9 @@
         <span class="badge">Pro C</span>
       </div>
 
-      <h4 style="margin-top:20px;">New Stack</h4>
+      <h4 style="margin-top:25px;">New Stack</h4>
       <div class="badges">
-        <span class="badge">Spring Boot 2.x</span>
+        <span class="badge">Spring Boot</span>
         <span class="badge">Java 8</span>
         <span class="badge">Angular</span>
         <span class="badge">TypeScript</span>
@@ -277,38 +353,26 @@
         <span class="badge">GCP</span>
       </div>
 
-       <h3>Roles and Responsibilities</h3>
-      <p>
-        Developed technical specifications for new applications
-Wrote code to develop new features
-Coordinated with team members to troubleshoot technical issues
-Monitored performance of applications and provided recommendations for improvements
-      </p>
+      <h3 style="margin-top:30px;">Roles & Responsibilities</h3>
+      <ul>
+        <li>Developed technical specifications for new applications</li>
+        <li>Implemented new features and enhancements</li>
+        <li>Coordinated with cross-functional teams</li>
+        <li>Monitored performance and optimized applications</li>
+      </ul>
     </div>
-
   </div>
 </section>
 
-  <section id="contact">
+<section id="contact">
   <h2>Contact Me</h2>
-  <p>Email: <strong>jebaraj20@gmail.com</strong></p>
-    <p>Mobile: <strong>9952302471</strong></p>
-  <p>
-    GitHub:
-    <a href="https://jebaraj20-coder.github.io/portfolio/" target="_blank">
-      Portfolio
-    </a>
-  </p>
-  <p>
-    LinkedIn:
-    <a href="https://www.linkedin.com/in/jebaraj-baskaran" target="_blank">
-      Profile
-    </a>
-  </p>
+  <p>Email: <a href="mailto:jebaraj20@gmail.com">jebaraj20@gmail.com</a></p>
+  <p>Mobile: <a href="tel:+919952302471">+91 99523 02471</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/jebaraj-baskaran" target="_blank">Profile</a></p>
 </section>
 
 <footer>
-  © 2026 Jebaa Baskar
+  © 2026 Jebaraj Baskaran
 </footer>
 
 <script>
@@ -320,8 +384,8 @@ Monitored performance of applications and provided recommendations for improveme
 
   TagCloud(".tagcloud", tags, {
     radius: 200,
-    maxSpeed: "fast",
-    initSpeed: "normal",
+    maxSpeed: "normal",
+    initSpeed: "slow",
     direction: 135,
     keep: true
   });
