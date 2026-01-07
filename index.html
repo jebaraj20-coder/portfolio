@@ -303,14 +303,17 @@
 </footer>
 
 <script>
-   const tags = [
+  const tags = [
     "Java", "Spring Boot", "Spring JPA", "Angular", "CSS", "JavaScript", "jQuery",
     "Docker", "Kubernetes", "Apache Tomcat", "SQL Server",
-    "Oracle", "GCP", "Jenkins", "Bitbucket", "Artifactory", "gitlabee", "OKTA"
-  ]; {
+    "Oracle", "GCP", "Jenkins", "Bitbucket", "Artifactory", "GitLab", "OKTA"
+  ];
+
+  TagCloud(".tagcloud", tags, {
     radius: 200,
     maxSpeed: "fast",
     initSpeed: "normal",
+    direction: 135,
     keep: true
   });
 </script>
